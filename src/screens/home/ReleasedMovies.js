@@ -2,7 +2,8 @@
 This component displays the released movies in the left side of the page layout
  */
 
-import { GridList, GridListTile, GridListTileBar } from "@material-ui/core";
+
+import { ImageList, ImageListItem , ImageListItemBar } from "@material-ui/core";
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
@@ -13,7 +14,7 @@ const styles = theme => ({
         backgroundColor: theme.palette.background.paper
     },
     gridListMain: {
-        transform: 'translateZ(0)',        
+        transform: 'translateZ(0)',
     },
     releasedMovieGridItem: {
         margin: '15px',
@@ -34,22 +35,22 @@ const ReleasedMovies = (props) => {
 
         history.push('/movie/' + movieId);
     }
-    
+
     const { classes } = props;
 
     return (
         <div>
-            <GridList cellHeight={350} cols={4} className={classes.gridListMain}>
+            <ImageList rowHeight={350} cols={4} className={classes.gridListMain}>
                 {releasedMovies.map(movie => (
-                    <GridListTile onClick={() => movieClickHandler(movie.id)} className={classes.releasedMovieGridItem} key={"grid" + movie.id}>
+                    <ImageListItem  onClick={() => movieClickHandler(movie.id)} className={classes.releasedMovieGridItem} key={"grid" + movie.id}>
                         <img src={movie.poster_url} className="movie-poster" alt={movie.title} />
-                        <GridListTileBar
+                        <ImageListItemBar
                             title={movie.title}
                             subtitle={<span>Release Date: {new Date(movie.release_date).toDateString()}</span>}
                         />
-                    </GridListTile>
+                    </ImageListItem >
                 ))}
-            </GridList>
+            </ImageList>
         </div>
     )
 }
