@@ -26,9 +26,9 @@ import Button from '@material-ui/core/Button';
 import axios from 'axios';
 import ReleasedMovies from './ReleasedMovies';
 /*import { ImageList } from '@material-ui/core/ImageListItem';*/
-import ImageListItem from '@material-ui/core/ImageListItem';
+/*import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageList from '@material-ui/core/ImageList';
-import ImageListItemBar from '@material-ui/core/ImageListItemBar';
+import ImageListItemBar from '@material-ui/core/ImageListItemBar';*/
 
 const styles = theme => ({
     root: {
