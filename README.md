@@ -6,3 +6,8 @@ Pre-requisites-
 1.Please ensure that the you have an active backend for the front end code to run.
 
 2. Please follow the steps mentioned in the assignment module to set up the backend and the database without which the front end code will not execute.
+
+3. Run npm install to have all the dependencies in place.
+
+4. Run npm start to start the front end application.
+
